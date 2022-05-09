@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:components="clr-namespace:NewEntry.Components"
+             x:Class="NewEntry.MainPage">
+
+    <ScrollView>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+            <Grid>
+            <Path  Fill="white" Stroke="DarkGray" Aspect="Uniform" HeightRequest="36" WidthRequest="36" HorizontalOptions="Center" 
+                   Data="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z">
+
+            </Path>
+                <!--<Path  Fill="white" Stroke="DarkGray" Aspect="Uniform" HeightRequest="36" WidthRequest="36" HorizontalOptions="Center" 
+                   Data="M32 19.5a12 12 0 1 0 12 12 12 12 0 0 0-12-12zm0 18a6 6 0 0 1-5.2-9 2 2 0 0 1 3.5 2 2 2 0 0 0-.3 1 2 2 0 0 0 2 2 2 2 0 1 1 0 4z">
+
+                </Path>-->
+            </Grid>
+            <components:FilledEntry PlaceholderText="CPF"
+                Keyboard="Chat"
+                ActivePlaceholderColor="#C9920E"
+                BorderColorActive="#C9920E"    
+                                    ClearText="True"
+                ReturnType="Next"
+                MaxLength="20"/>
+        <components:FilledEntry PlaceholderText="CPF"
+                Keyboard="Chat"
+                BorderColor="Aqua"
+                PlaceholderColor="Aqua"
+                ActivePlaceholderColor="Green"
+                ClearText="True"
+                BorderColorActive="Green"    
+                ReturnType="Next"
+                MaxLength="20"/>
+
+        <components:FilledEntry 
+                PlaceholderText="With leading icon"      
+                Keyboard="Email"
+                HelperText="Oi"
+                TextColor="Aqua"
+                MaxLength="100"
+                LeadingIcon="ic_user.png"
+                ReturnType="Next" />
+
+        <components:FilledEntry PlaceholderText="With password"
+                Keyboard="Default"
+                ReturnType="Go"
+                IsPassword="True"/>
+
+        <components:FilledEntry PlaceholderText="With error"
+                BorderColorActive="#C9920E"       
+                Keyboard="Email"
+                ReturnType="Next"
+                HasError="True"
+                ErrorText="Error message"/>
+        
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
